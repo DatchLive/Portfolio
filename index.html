@@ -5,7 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Datchlive</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
     integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -14,67 +17,77 @@
 <body>
 
   <header>
-    <h1>Datchlive</h1>
+    <!-- <h1>Datchlive</h1> -->
     <nav>
       <ul>
-        <li>
-          <span class="material-icons">
-            home
-          </span>
-        </li>
-        <li><a href="">Home</a></li>
-        <li>
-          <span class="material-icons">
-            person
-          </span>
-        </li>
-        <li><a href="">About</a></li>
-        <li><span class="material-icons">
-            work
-          </span></li>
-        <li><a href="">Works</a></li>
-        <li><span class="material-icons">
-            edit
-          </span>
-        </li>
-        <li><a href="">Blog</a></li>
-        <li><span class="material-icons">
-            email
-          </span>
-        </li>
-        <li><a href="">Contact</a></li>
+        <div class="navigation-btn">
+          <li><span class="material-icons">home</span></li>
+          <li class="text"><a href="">Home</a></li>
+        </div>
+        <div class="navigation-btn">
+          <li>
+            <span class="material-icons">person</span>
+          </li>
+          <li class="text"><a href="">About</a></li>
+        </div>
+        <div class="navigation-btn">
+          <li>
+            <span class="material-icons">work</span>
+          </li>
+          <li class="text"><a href="">Works</a></li>
+        </div>
+        <div class="navigation-btn">
+          <li><span class="material-icons">
+              edit
+            </span>
+          </li>
+          <li class="text"><a href="">Blog</a></li>
+        </div>
+        <div class="navigation-btn">
+          <li><span class="material-icons">
+              email
+            </span>
+          </li>
+          <li class="text"><a href="">Contact</a></li>
+        </div>
       </ul>
-    </nav>
 
-    <ul>
-      <li>KouheiHonda</li>
-      <li>YouTubeCreater</li>
-      <li><i class="fab fa-youtube"></i></li>
-      <li><i class="fab fa-twitter"></i></li>
-      <li><i class="fab fa-instagram"></i></li>
-    </ul>
+    </nav>
+    <!-- <div class="prof">
+      <ul>
+        <li class="prof-name">KoheiHonda</li>
+        <li class="prof-work">YouTubeCreater</li>
+        <div class="prof-icon">
+          <li><i class="fab fa-youtube"></i></li>
+          <li><i class="fab fa-twitter"></i></li>
+          <li><i class="fab fa-instagram"></i></li>
+        </div>
+      </ul>
+    </div> -->
   </header>
 
   <main>
 
-    <section>
+    <section class="top-about">
       <h2>About</h2>
-      <img src="Image/Datch-icon1.png" alt="プロフィールアイコン">
-      <div>だっち/KouheiHonda</div>
+      <img src="Image/Datch-icon1.png" alt="プロフィールアイコン" class="top-about-prof">
+      <div class="top-about-name">だっち/KouheiHonda</div>
       <ul>
-        <li><i class="fab fa-youtube"></i></li>
-        <li><i class="fab fa-twitter"></i></li>
-        <li><i class="fab fa-instagram"></i></li>
+        <div class="top-about-sns">
+          <li><i class="fab fa-youtube"></i></li>
+          <li><i class="fab fa-twitter"></i></li>
+          <li><i class="fab fa-instagram"></i></li>
+        </div>
       </ul>
-      <p>
+      <p class="to-about-para">
         1992年生まれ28歳。現在は自動車メーカーにてサスペンション機構設計を担当。趣味でYouTubeにて自分が使って良かった「モノ・サービス」を紹介しており、現在チャンネル登録者5000人↑、総再生回数120万回↑。2020年10月より、Webデザイン・プログラミングを学習中。学生時代、「社交ダンス」の九州チャンピオンという異例な経歴も…。
       </p>
     </section>
 
-    <section>
+    <section class="top-contents">
       <h2>Works</h2>
       <h3>YouTubePR</h3>
-      <img src="./Image/YouTube-1.jpg" alt="YouTubePRサムネイル">
+      <!-- <img src="./Image/YouTube-1.jpg" alt="YouTubePRサムネイル"> -->
       <p>
         「適切に伝える」をモットーに、ガジェット・雑貨製品を、累計5本以上のPR動画制作を行っています。詳しい実績については以下「READ MORE」よりご確認下さい。
       </p>
@@ -82,9 +95,10 @@
       <button>YouTube</button>
     </section>
 
-    <section>
+    <section class="top-contents">
       <h3>VideoProduction</h3>
-      <img src="./Image/Video-1.jpg" alt="VideoProductionサムネイル">
+
+      <!-- <img src="./Image/Video-1.jpg" alt="VideoProductionサムネイル"> -->
       <p>
         主に社交ダンスのジャンルを中心に映像制作を行っています。社交ダンス経験者・YouTuber、それぞれの視点から映像制作だけでなく、YouTubeチャンネル運営のアドバイスも行っています。
       </p>
@@ -98,7 +112,7 @@
       <li><i class="fab fa-twitter"></i></li>
       <li><i class="fab fa-instagram"></i></li>
     </ul>
-    <div>&copy;2020DatchLive</div>
+    <small>&copy;2020DatchLive</small>
   </footer>
 
 </body>

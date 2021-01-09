@@ -1,0 +1,110 @@
+$main_color: #333333;
+$sub_color: #ffffff;
+$font_size: 1.6rem;
+$font_logo: 'Allura', cursive;
+
+h2 {
+  font-family: $font_logo;
+  font-size: 3.6rem;
+}
+
+html {
+  color: $main_color;
+  font-size: 62.5%;
+  font-family: '游ゴシック体', YuGothic, '游ゴシック Medium', 'Yu Gothic Medium',
+    '游ゴシック', 'Yu Gothic', sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+header {
+  height: 0;
+  /* 表示画像の高さ ÷ 表示画像の幅 × 100 */
+  padding-top: 52.17%;
+  margin-bottom: 32px;
+  background-image: url(../Image/Home-Mainvisual.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+// h1 {
+//   color: $sub_color;
+//   font-family: $font_logo;
+//   font-size: 6rem;
+//   margin-bottom: 24px;
+// }
+
+nav {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border: 1px solid #333333;
+  background-color: $sub_color;
+  ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 12px auto;
+    li {
+      &.text {
+        font-family: $font_logo;
+        font-size: $font_size;
+      }
+      span {
+        &.material-icons {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}
+.navigation-btn {
+  text-align: center;
+}
+
+// .prof {
+//   position: absolute;
+//   top: 10vw;
+//   color: $sub_color;
+//   border-left: 3px solid $sub_color;
+//   &-name {
+//     font-size: 2.4rem;
+//     margin-bottom: 12px;
+//   }
+//   &-work {
+//     font-size: $font_size;
+//     margin-bottom: 12px;
+//   }
+//   &-icon {
+//     display: flex;
+//     justify-content: space-between;
+//     font-size: 2.4rem;
+//     max-width: 100px;
+//   }
+// }
+
+.top-about {
+  text-align: center;
+  &-prof {
+    width: 200px;
+    margin-bottom: 16px;
+  }
+  &-name {
+    font-weight: bold;
+    font-size: $font_size;
+    margin-bottom: 16px;
+  }
+  &-sns {
+    display: flex;
+    font-size: 1.6rem;
+    max-width: 100px;
+    justify-content: space-between;
+    margin: 0 auto 32px;
+  }
+  &-para {
+    display: block;
+    margin: 0 5vw 96px;
+  }
+}
