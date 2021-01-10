@@ -1,17 +1,8 @@
 @charset "UTF-8";
-h2 {
-  font-family: "Allura", cursive;
-  font-size: 3.6rem;
-}
-
 html {
   color: #333333;
   font-size: 62.5%;
   font-family: '游ゴシック体', YuGothic, '游ゴシック Medium', 'Yu Gothic Medium', '游ゴシック', 'Yu Gothic', sans-serif;
-}
-
-p {
-  font-size: 1.6rem;
 }
 
 header {
@@ -22,6 +13,24 @@ header {
   background-image: url(../Image/Home-Mainvisual.jpg);
   background-size: cover;
   position: relative;
+}
+
+h2 {
+  font-family: "Allura", cursive;
+  font-size: 3.6rem;
+  margin-bottom: 8px;
+}
+
+h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-align: left;
 }
 
 nav {
@@ -57,6 +66,7 @@ nav ul li span.material-icons {
 
 .top-about {
   text-align: center;
+  padding: 0 5vw 64px;
 }
 
 .top-about-prof {
@@ -82,8 +92,62 @@ nav ul li span.material-icons {
   margin: 0 auto 32px;
 }
 
-.top-about-para {
-  display: block;
-  margin: 0 5vw 96px;
+.top-ytworks {
+  text-align: center;
+  padding: 0 10vw 64px;
+}
+
+.top-ytworks-para {
+  margin-bottom: 32px;
+}
+
+.btn-YT {
+  margin-top: 16px;
+}
+
+.top-vpworks {
+  text-align: center;
+  padding: 0 10vw 96px;
+}
+
+.top-vpworks-para {
+  margin-bottom: 32px;
+}
+
+footer {
+  background-color: #333333;
+  margin-bottom: 76px;
+  padding: 12px 0;
+  text-align: center;
+}
+
+footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 150px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto 12px;
+}
+
+footer div li {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+footer div li i {
+  color: #333333;
+  font-size: 1.6rem;
+  padding: 10px;
+}
+
+footer small {
+  color: #ffffff;
+  font-size: 1.2rem;
 }
 /*# sourceMappingURL=style.css.map */
