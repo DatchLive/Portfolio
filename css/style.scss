@@ -3,20 +3,11 @@ $sub_color: #ffffff;
 $font_size: 1.6rem;
 $font_logo: 'Allura', cursive;
 
-h2 {
-  font-family: $font_logo;
-  font-size: 3.6rem;
-}
-
 html {
   color: $main_color;
   font-size: 62.5%;
   font-family: '游ゴシック体', YuGothic, '游ゴシック Medium', 'Yu Gothic Medium',
     '游ゴシック', 'Yu Gothic', sans-serif;
-}
-
-p {
-  font-size: 1.6rem;
 }
 
 header {
@@ -35,6 +26,24 @@ header {
 //   font-size: 6rem;
 //   margin-bottom: 24px;
 // }
+
+h2 {
+  font-family: $font_logo;
+  font-size: 3.6rem;
+  margin-bottom: 8px;
+}
+
+h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-align: left;
+}
 
 nav {
   position: fixed;
@@ -87,6 +96,7 @@ nav {
 
 .top-about {
   text-align: center;
+  padding: 0 5vw 64px;
   &-prof {
     width: 200px;
     margin-bottom: 16px;
@@ -103,8 +113,55 @@ nav {
     justify-content: space-between;
     margin: 0 auto 32px;
   }
+}
+
+.top-ytworks {
+  text-align: center;
+  padding: 0 10vw 64px;
   &-para {
-    display: block;
-    margin: 0 5vw 96px;
+    margin-bottom: 32px;
   }
 }
+
+.btn-YT {
+  margin-top: 16px;
+}
+
+.top-vpworks {
+  text-align: center;
+  padding: 0 10vw 96px;
+  &-para {
+    margin-bottom: 32px;
+  }
+}
+
+footer {
+  background-color: $main_color;
+  margin-bottom: 76px;
+  padding: 12px 0;
+  text-align: center;
+  div {
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+    margin: 0 auto 12px;
+    li {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      background-color: $sub_color;
+      border-radius: 50%;
+      i {
+        color: $main_color;
+        font-size: 1.6rem;
+        padding: 10px;
+      }
+    }
+  }
+  small {
+    color: $sub_color;
+    font-size: 1.2rem;
+  }
+}
+
+
