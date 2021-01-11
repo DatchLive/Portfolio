@@ -20,12 +20,16 @@ header {
   position: relative;
 }
 
-// h1 {
-//   color: $sub_color;
-//   font-family: $font_logo;
-//   font-size: 6rem;
-//   margin-bottom: 24px;
-// }
+img {
+  max-width: 100%;
+}
+
+h1 {
+  color: $sub_color;
+  font-family: $font_logo;
+  font-size: clamp(3.2rem, 30vw, 6rem);
+  margin-bottom: 24px;
+}
 
 h2 {
   font-family: $font_logo;
@@ -73,26 +77,27 @@ nav {
   text-align: center;
 }
 
-// .prof {
-//   position: absolute;
-//   top: 10vw;
-//   color: $sub_color;
-//   border-left: 3px solid $sub_color;
-//   &-name {
-//     font-size: 2.4rem;
-//     margin-bottom: 12px;
-//   }
-//   &-work {
-//     font-size: $font_size;
-//     margin-bottom: 12px;
-//   }
-//   &-icon {
-//     display: flex;
-//     justify-content: space-between;
-//     font-size: 2.4rem;
-//     max-width: 100px;
-//   }
-// }
+.prof {
+  position: absolute;
+  top: 8vw;
+  left: 10px;
+  color: $sub_color;
+
+  &-name {
+    font-size: 2.4rem;
+    margin-bottom: 12px;
+  }
+  &-work {
+    font-size: $font_size;
+    margin-bottom: 12px;
+  }
+  &-icon {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2.4rem;
+    max-width: 100px;
+  }
+}
 
 .top-about {
   text-align: center;
@@ -108,7 +113,7 @@ nav {
   }
   &-sns {
     display: flex;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     max-width: 100px;
     justify-content: space-between;
     margin: 0 auto 32px;
@@ -164,4 +169,20 @@ footer {
   }
 }
 
+.btn {
+  display: inline-block;
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 1em;
+  cursor: pointer;
+  color: $sub_color;
+  background: $main_color;
+  padding: 12px 0;
 
+  width: 160px;
+  height: 40px;
+}
+
+.thumbnail {
+  margin-bottom: 32px;
+}
