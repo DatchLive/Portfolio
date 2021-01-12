@@ -15,6 +15,17 @@ header {
   position: relative;
 }
 
+img {
+  max-width: 100%;
+}
+
+h1 {
+  color: #ffffff;
+  font-family: "Allura", cursive;
+  font-size: clamp(3.2rem, 30vw, 6rem);
+  margin-bottom: 24px;
+}
+
 h2 {
   font-family: "Allura", cursive;
   font-size: 3.6rem;
@@ -64,6 +75,34 @@ nav ul li span.material-icons {
   text-align: center;
 }
 
+.prof {
+  position: absolute;
+  top: 8vw;
+  left: 10px;
+  color: #ffffff;
+}
+
+.prof-name {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+}
+
+.prof-work {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.prof-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 2.4rem;
+  max-width: 100px;
+}
+
 .top-about {
   text-align: center;
   padding: 0 5vw 64px;
@@ -84,7 +123,7 @@ nav ul li span.material-icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   max-width: 100px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -149,5 +188,22 @@ footer div li i {
 footer small {
   color: #ffffff;
   font-size: 1.2rem;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 1em;
+  cursor: pointer;
+  color: #ffffff;
+  background: #333333;
+  padding: 12px 0;
+  width: 160px;
+  height: 40px;
+}
+
+.thumbnail {
+  margin-bottom: 32px;
 }
 /*# sourceMappingURL=style.css.map */
