@@ -5,46 +5,11 @@ html {
   font-family: '游ゴシック体', YuGothic, '游ゴシック Medium', 'Yu Gothic Medium', '游ゴシック', 'Yu Gothic', sans-serif;
 }
 
-header {
-  height: 0;
-  /* 表示画像の高さ ÷ 表示画像の幅 × 100 */
-  padding-top: 52.17%;
-  margin-bottom: 32px;
-  background-image: url(../Image/Home-Mainvisual.jpg);
-  background-size: cover;
-  position: relative;
-}
-
 img {
   max-width: 100%;
 }
 
-h1 {
-  color: #ffffff;
-  font-family: "Allura", cursive;
-  font-size: clamp(3.2rem, 30vw, 6rem);
-  margin-bottom: 24px;
-}
-
-h2 {
-  font-family: "Allura", cursive;
-  font-size: 3.6rem;
-  margin-bottom: 8px;
-}
-
-h3 {
-  font-size: 1.6rem;
-  font-weight: bold;
-  margin-bottom: 16px;
-}
-
-p {
-  font-size: 1.6rem;
-  line-height: 1.5;
-  text-align: left;
-}
-
-nav {
+.nav {
   position: fixed;
   left: 0;
   bottom: 0;
@@ -53,7 +18,7 @@ nav {
   background-color: #ffffff;
 }
 
-nav ul {
+.nav-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,95 +27,13 @@ nav ul {
   margin: 12px auto;
 }
 
-nav ul li.text {
+.nav-text {
   font-family: "Allura", cursive;
   font-size: 1.6rem;
 }
 
-nav ul li span.material-icons {
+.nav-icon {
   font-size: 3rem;
-}
-
-.navigation-btn {
-  text-align: center;
-}
-
-.prof {
-  position: absolute;
-  top: 8vw;
-  left: 10px;
-  color: #ffffff;
-}
-
-.prof-name {
-  font-size: 2.4rem;
-  margin-bottom: 12px;
-}
-
-.prof-work {
-  font-size: 1.6rem;
-  margin-bottom: 12px;
-}
-
-.prof-icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  font-size: 2.4rem;
-  max-width: 100px;
-}
-
-.top-about {
-  text-align: center;
-  padding: 0 5vw 64px;
-}
-
-.top-about-prof {
-  width: 200px;
-  margin-bottom: 16px;
-}
-
-.top-about-name {
-  font-weight: bold;
-  font-size: 1.6rem;
-  margin-bottom: 16px;
-}
-
-.top-about-sns {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.8rem;
-  max-width: 100px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 0 auto 32px;
-}
-
-.top-ytworks {
-  text-align: center;
-  padding: 0 10vw 64px;
-}
-
-.top-ytworks-para {
-  margin-bottom: 32px;
-}
-
-.btn-YT {
-  margin-top: 16px;
-}
-
-.top-vpworks {
-  text-align: center;
-  padding: 0 10vw 96px;
-}
-
-.top-vpworks-para {
-  margin-bottom: 32px;
 }
 
 footer {
@@ -190,6 +73,16 @@ footer small {
   font-size: 1.2rem;
 }
 
+.bottom-header {
+  height: 0;
+  /* 表示画像の高さ ÷ 表示画像の幅 × 100 */
+  padding-top: 26.25%;
+  margin-bottom: 32px;
+  background-image: url(../Image/Botttom-Mainvisual.jpg);
+  background-size: cover;
+  position: relative;
+}
+
 .btn {
   display: inline-block;
   font-size: 1.6rem;
@@ -199,11 +92,221 @@ footer small {
   color: #ffffff;
   background: #333333;
   padding: 12px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 160px;
   height: 40px;
 }
 
+.about {
+  padding: 0 10vw 64px;
+  margin: 0 auto 50px;
+  max-width: 640px;
+  position: relative;
+}
+
+.about-image {
+  max-width: 220px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about-info {
+  background-color: #ffffff;
+  border: 1px solid #333333;
+  padding: 16px;
+  width: 60vw;
+  position: absolute;
+  top: 200px;
+  right: 10vw;
+}
+
+.about-name {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.career {
+  font-size: 1.6rem;
+  padding: 0 10vw 64px;
+}
+
+.career-ivent {
+  margin-bottom: 24px;
+}
+
+.career-year {
+  margin-bottom: 8px;
+}
+
+.media {
+  font-size: 1.6rem;
+  padding: 0 10vw 96px;
+}
+
+.top-header {
+  height: 0;
+  /* 表示画像の高さ ÷ 表示画像の幅 × 100 */
+  padding-top: 52.17%;
+  margin-bottom: 32px;
+  background-image: url(../Image/Top-Mainvisual.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+h1 {
+  color: #ffffff;
+  font-family: "Allura", cursive;
+  font-size: clamp(3.2rem, 30vw, 6rem);
+}
+
+h2 {
+  font-family: "Allura", cursive;
+  font-size: 3.6rem;
+  margin-bottom: 8px;
+}
+
+h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.nav-btn {
+  text-align: center;
+}
+
+.prof {
+  position: absolute;
+  top: 8vw;
+  left: 10px;
+  color: #ffffff;
+}
+
+.prof-name {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+}
+
+.prof-work {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.prof-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 2.4rem;
+  max-width: 100px;
+}
+
+.top-about {
+  text-align: center;
+  max-width: 640px;
+  padding: 0 10vw 64px;
+  margin: 0 auto;
+}
+
+.top-about-prof {
+  width: 200px;
+  margin-bottom: 16px;
+}
+
+.top-about-name {
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+}
+
+.top-about-sns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.8rem;
+  max-width: 100px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto 32px;
+}
+
+.top-about-para {
+  margin-bottom: 32px;
+}
+
+.top-ytworks {
+  text-align: center;
+  max-width: 640px;
+  padding: 0 10vw 64px;
+  margin: 0 auto;
+}
+
+.top-ytworks-para {
+  margin-bottom: 32px;
+}
+
+.btn-YT {
+  margin-top: 16px;
+}
+
+.top-vpworks {
+  text-align: center;
+  max-width: 640px;
+  padding: 0 10vw 96px;
+  margin: 0 auto;
+}
+
+.top-vpworks-para {
+  margin-bottom: 32px;
+}
+
 .thumbnail {
   margin-bottom: 32px;
+}
+
+@media screen and (min-width: 1025px) {
+  .nav {
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    width: 60vw;
+    background-color: transparent;
+    border: none;
+    margin-left: 40vw;
+  }
+  .nav-icon {
+    display: none;
+  }
+  .nav-text {
+    font-family: '游ゴシック体', YuGothic, '游ゴシック Medium', 'Yu Gothic Medium', '游ゴシック', 'Yu Gothic', sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #333333;
+  }
+  .ytworks-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 auto;
+  }
+  .btn-YT {
+    margin: 0 0 0 32px;
+  }
+  footer {
+    margin: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
