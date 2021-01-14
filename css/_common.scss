@@ -10,6 +10,7 @@ html {
   font-family: '游ゴシック体', YuGothic, '游ゴシック Medium', 'Yu Gothic Medium',
     '游ゴシック', 'Yu Gothic', sans-serif;
 }
+
 img {
   max-width: 100%;
 }
@@ -74,6 +75,39 @@ footer {
   position: relative;
 }
 
+.wrapper {
+  padding: 0 10vw;
+  max-width: 640px;
+}
+
+//サイトロゴ
+.sitelogo {
+  &-top {
+    font-family: $font_logo;
+    font-size: clamp(3.2rem, 30vw, 6rem);
+  }
+  &-bottom {
+    font-family: $font_logo;
+    font-size: clamp(3.2rem, 30vw, 6rem);
+  }
+}
+
+//タイトル
+.title {
+  &-top {
+    font-family: $font_logo;
+    font-size: 3.6rem;
+    margin-bottom: 8px;
+  }
+  &-bottom {
+    font-family: $font_logo;
+    font-size: 3.6rem;
+    padding: 0 10vw 0;
+    margin-bottom: 24px;
+  }
+}
+
+//ボタン
 .btn {
   display: inline-block;
   font-size: 1.6rem;

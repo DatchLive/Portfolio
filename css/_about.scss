@@ -1,7 +1,5 @@
 .about {
-  padding: 0 10vw 64px;
-  margin: 0 auto 50px;
-  max-width: 640px;
+  margin: 0 auto 64px;
   position: relative;
   &-image {
     max-width: 220px;
@@ -25,7 +23,7 @@
 
 .career {
   font-size: $font_size;
-  padding: 0 10vw 64px;
+  margin-bottom: 64px;
   &-ivent {
     margin-bottom: 24px;
   }
@@ -36,5 +34,5 @@
 
 .media {
   font-size: $font_size;
-  padding: 0 10vw 96px;
+  margin: 0 auto 96px;
 }
