@@ -1,5 +1,6 @@
 @import 'common';
 @import 'about';
+@import 'works';
 
 .top-header {
   height: 0;
@@ -9,18 +10,6 @@
   background-image: url(../Image/Top-Mainvisual.jpg);
   background-size: cover;
   position: relative;
-}
-
-h1 {
-  color: $sub_color;
-  font-family: $font_logo;
-  font-size: clamp(3.2rem, 30vw, 6rem);
-}
-
-h2 {
-  font-family: $font_logo;
-  font-size: 3.6rem;
-  margin-bottom: 8px;
 }
 
 h3 {
@@ -63,9 +52,7 @@ p {
 
 .top-about {
   text-align: center;
-  max-width: 640px;
-  padding: 0 10vw 64px;
-  margin: 0 auto;
+  margin: 0 auto 64px;
   &-prof {
     width: 200px;
     margin-bottom: 16px;
@@ -89,9 +76,7 @@ p {
 
 .top-ytworks {
   text-align: center;
-  max-width: 640px;
-  padding: 0 10vw 64px;
-  margin: 0 auto;
+  margin: 0 auto 64px;
   &-para {
     margin-bottom: 32px;
   }
@@ -103,9 +88,7 @@ p {
 
 .top-vpworks {
   text-align: center;
-  max-width: 640px;
-  padding: 0 10vw 96px;
-  margin: 0 auto;
+  margin: 0 auto 96px;
   &-para {
     margin-bottom: 32px;
   }
