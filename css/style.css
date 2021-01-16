@@ -16,6 +16,7 @@ img {
   width: 100%;
   border: 1px solid #333333;
   background-color: #ffffff;
+  z-index: 9999;
 }
 
 .nav-list {
@@ -95,7 +96,12 @@ footer small {
 
 .sitelogo-bottom {
   font-family: "Allura", cursive;
-  font-size: clamp(3.2rem, 30vw, 6rem);
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #333333;
+  font-size: calc(6rem + (10 - 6) * ((100vw - 30rem) / (120 - 30)));
+  position: absolute;
+  top: 10px;
+  left: 10vw;
 }
 
 .title-top {
@@ -141,9 +147,8 @@ footer small {
   background-color: #ffffff;
   border: 1px solid #333333;
   padding: 16px;
-  width: 60vw;
-  position: absolute;
-  top: 200px;
+  position: relative;
+  bottom: 50px;
   right: 10vw;
 }
 
@@ -155,7 +160,7 @@ footer small {
 
 .career {
   font-size: 1.6rem;
-  margin-bottom: 64px;
+  margin: 0 auto 64px;
 }
 
 .career-ivent {
@@ -174,8 +179,8 @@ footer small {
 .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (100%)[1];
-      grid-template-columns: repeat(1, 100%);
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
   row-gap: 32px;
   margin-bottom: 32px;
 }
@@ -184,13 +189,64 @@ footer small {
   margin-bottom: 32px;
 }
 
+.bottom-ytworks {
+  margin: 0 auto 64px;
+  text-align: center;
+}
+
+.bottom-vpworks {
+  margin: 0 auto 96px;
+  text-align: center;
+}
+
 @media screen and (min-width: 1025px) {
   .container {
-    -ms-grid-columns: (50%)[2];
-        grid-template-columns: repeat(2, 50%);
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
     -webkit-column-gap: 32px;
             column-gap: 32px;
   }
+}
+
+.form {
+  font-size: 1.6rem;
+  margin: 0 auto 96px;
+}
+
+.form-label {
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.form-text {
+  width: 100%;
+  border: 1px solid #333333;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 32px;
+}
+
+.form-terms {
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 1.2rem;
+}
+
+.form-btn {
+  text-align: center;
+}
+
+textarea {
+  width: 100%;
+  height: 80px;
+  border: 1px solid #333333;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  resize: none;
+  margin-bottom: 32px;
 }
 
 .top-header {
@@ -222,8 +278,15 @@ p {
 .prof {
   position: absolute;
   top: 8vw;
-  left: 10px;
+  left: 10vw;
   color: #ffffff;
+  text-shadow: 1px 1px 2px #333333;
+}
+
+.prof-list {
+  border-left: 3px solid #ffffff;
+  text-shadow: 1px 1px 2px #333333;
+  padding-left: 10px;
 }
 
 .prof-name {
@@ -309,6 +372,7 @@ p {
   .nav {
     position: absolute;
     top: 0;
+    right: 0;
     display: inline-block;
     width: 60vw;
     background-color: transparent;
@@ -330,7 +394,9 @@ p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 0 auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .btn-YT {
     margin: 0 0 0 32px;

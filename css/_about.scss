@@ -9,9 +9,9 @@
     background-color: $sub_color;
     border: 1px solid $main_color;
     padding: 16px;
-    width: 60vw;
-    position: absolute;
-    top: 200px;
+
+    position: relative;
+    bottom: 50px;
     right: 10vw;
   }
   &-name {
@@ -23,7 +23,7 @@
 
 .career {
   font-size: $font_size;
-  margin-bottom: 64px;
+  margin: 0 auto 64px;
   &-ivent {
     margin-bottom: 24px;
   }
