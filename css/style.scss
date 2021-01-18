@@ -37,9 +37,9 @@ p {
   text-shadow: 1px 1px 2px $main_color;
 
   &-list {
-    border-left: 3px solid $sub_color;
     text-shadow: 1px 1px 2px $main_color;
     padding-left: 10px;
+    display: relative;
   }
 
   &-name {
@@ -115,7 +115,7 @@ p {
     width: 60vw;
     background-color: transparent;
     border: none;
-    margin-left: 40vw;
+    // margin-left: 40vw;
     &-icon {
       display: none;
     }
