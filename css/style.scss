@@ -1,6 +1,7 @@
 @import 'common';
 @import 'about';
 @import 'works';
+@import 'blog';
 @import 'contact';
 
 .top-header {
@@ -139,5 +140,9 @@ p {
 
   footer {
     margin: 0;
+  }
+
+  .checkbox {
+    display: flex;
   }
 }
