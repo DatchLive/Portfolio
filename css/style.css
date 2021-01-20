@@ -207,6 +207,11 @@ footer small {
   }
 }
 
+.blog-article {
+  border: 1px solid #333333;
+  padding: 5vw;
+}
+
 .form {
   font-size: 1.6rem;
   margin: 0 auto 96px;
@@ -235,6 +240,75 @@ footer small {
 
 .form-btn {
   text-align: center;
+}
+
+.checkbox-icon {
+  /* □ */
+  position: absolute;
+  top: -1px;
+  /* 上からの位置 */
+  left: 0;
+  height: 20px;
+  /* 大きさ */
+  width: 20px;
+  /* 大きさ */
+  border: solid 1px #333333;
+  /* 線 */
+  border-radius: 2px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.checkbox-icon:after {
+  /* ✓ */
+  content: '';
+  position: absolute;
+  left: 4px;
+  /* チェックの位置 */
+  top: -1px;
+  /* チェックの位置 */
+  width: 6px;
+  /* チェックの大きさ */
+  height: 10px;
+  /* チェックの大きさ */
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  opacity: 0;
+  /* 透明にしておく */
+}
+
+.checkbox-box {
+  display: block;
+  position: relative;
+  margin: 0 16px 16px 0;
+  padding-left: 28px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  /* テキストの選択を防ぐ */
+  /* チェックが入ったときの✓ */
+}
+
+.checkbox-box input {
+  /* inputは非表示にする */
+  display: none;
+}
+
+.checkbox-box input:checked + .checkbox-icon {
+  /* チェックが入ったときの□ */
+  background: #333333;
+  /* チェック時の色 */
+  border-color: #333333;
+  /* チェック時の色 */
+}
+
+.checkbox-box input:checked + .checkbox-icon:after {
+  opacity: 1;
+  /* 透明を解除 */
 }
 
 textarea {
@@ -401,6 +475,11 @@ p {
   }
   footer {
     margin: 0;
+  }
+  .checkbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 /*# sourceMappingURL=style.css.map */
