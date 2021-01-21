@@ -86,11 +86,12 @@ footer small {
 .wrapper {
   padding: 0 10vw;
   max-width: 640px;
+  margin: auto;
 }
 
 .sitelogo-top {
   font-family: "Allura", cursive;
-  font-size: clamp(3.2rem, 30vw, 6rem);
+  font-size: clamp(3.2rem, 30vw, 12rem);
 }
 
 .sitelogo-bottom {
@@ -112,7 +113,6 @@ footer small {
 .title-bottom {
   font-family: "Allura", cursive;
   font-size: 3.6rem;
-  padding: 0 10vw 0;
   margin-bottom: 24px;
 }
 

@@ -78,13 +78,14 @@ footer {
 .wrapper {
   padding: 0 10vw;
   max-width: 640px;
+  margin: auto;
 }
 
 //サイトロゴ
 .sitelogo {
   &-top {
     font-family: $font_logo;
-    font-size: clamp(3.2rem, 30vw, 6rem);
+    font-size: clamp(3.2rem, 30vw, 12rem);
   }
   &-bottom {
     font-family: $font_logo;
@@ -107,7 +108,7 @@ footer {
   &-bottom {
     font-family: $font_logo;
     font-size: 3.6rem;
-    padding: 0 10vw 0;
+
     margin-bottom: 24px;
   }
 }
