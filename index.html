@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Datchlive</title>
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
     integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -82,10 +82,22 @@
       <h2 class="title-top">Works</h2>
       <h3>YouTubePR</h3>
 
-
-      <div class="thumbnail">
-        <img src="./Image/YouTube-1.jpg" alt="YouTubePRサムネイル1">
+      <!-- YouTubeスライダー -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="./Image/YouTube-1.jpg" alt="YouTubePRサムネイル1"></div>
+          <div class="swiper-slide"><img src="./Image/YouTube-2.jpg" alt="YouTubePRサムネイル2"></div>
+          <div class="swiper-slide"><img src="./Image/YouTube-3.jpg" alt="YouTubePRサムネイル3"></div>
+          <div class="swiper-slide"><img src="./Image/YouTube-4.jpg" alt="YouTubePRサムネイル4"></div>
+          <div class="swiper-slide"><img src="./Image/YouTube-5.jpg" alt="YouTubePRサムネイル5"></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
+
       <div class="top-ytworks-para">
         <p>
           「適切に伝える」をモットーに、ガジェット・雑貨製品を、累計5本以上のPR動画制作を行っています。詳しい実績については以下「READ MORE」よりご確認下さい。
@@ -103,8 +115,18 @@
 
     <section class="top-vpworks wrapper">
       <h3>VideoProduction</h3>
-      <div class="thumbnail">
-        <img src="./Image/Video-1.jpg" alt="VideoProductionサムネイル">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="./Image/Video-1.jpg" alt="Videoサムネイル1"></div>
+          <div class="swiper-slide"><img src="./Image/Video-2.jpg" alt="Videoサムネイル2"></div>
+          <div class="swiper-slide"><img src="./Image/Video-3.jpg" alt="Videoサムネイル3"></div>
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
       <div class="top-vpworks-para">
         <p>
@@ -113,6 +135,7 @@
       </div>
       <a href="./Works/works.html" class="btn">ReadMore</a>
     </section>
+
   </main>
 
   <footer>
@@ -125,11 +148,29 @@
     </ul>
     <small>&copy;2020DatchLive</small>
   </footer>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-
-
-
+  <!-- Swiper JS -->
+  <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
 </body>
 
 </html>

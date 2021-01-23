@@ -1,0 +1,16 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/DatchLive/Portfolio.git",
+  "author": "DatchLive <datchlivetv730@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "micromodal": "^0.4.6",
+    "swiper": "^6.4.8"
+  },
+  "devDependencies": {
+    "webpack": "^5.17.0",
+    "webpack-cli": "^4.4.0"
+  }
+}
