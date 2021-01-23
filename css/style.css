@@ -148,7 +148,10 @@ footer small {
   padding: 16px;
   position: relative;
   bottom: 50px;
-  right: 10vw;
+  left: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 590px;
 }
 
 .about-name {
