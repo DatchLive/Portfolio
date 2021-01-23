@@ -9,10 +9,11 @@
     background-color: $sub_color;
     border: 1px solid $main_color;
     padding: 16px;
-
     position: relative;
     bottom: 50px;
-    right: 10vw;
+    left: 50px;
+    box-sizing: border-box;
+    max-width: 590px;
   }
   &-name {
     font-size: $font_size;
