@@ -6,7 +6,6 @@
   "author": "DatchLive <datchlivetv730@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "micromodal": "^0.4.6",
     "swiper": "^6.4.8"
   },
   "devDependencies": {

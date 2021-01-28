@@ -6,6 +6,10 @@
 }
 
 .works {
+  &-image {
+    cursor: pointer;
+  }
+
   &-para {
     margin-bottom: 32px;
   }
