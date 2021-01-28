@@ -18,7 +18,7 @@
 <body>
 
   <header class="top-header">
-    <nav class="nav">
+    <nav class="nav" id="navigation">
       <ul class="nav-list">
         <div class="nav-btn">
           <li class="nav-icon"><a href="#"><span class="material-icons">home</span></a></li>
@@ -53,7 +53,10 @@
           <li><a href="https://www.instagram.com/datchlive/"><i class="fab fa-instagram"></i></a></li>
         </div>
       </ul>
-
+    </div>
+    <div class="toggle-switch" id="darkBtn">
+      <input id="toggle" class="toggle-input" type='checkbox' />
+      <label for="toggle" class="toggle-label"></label>
     </div>
   </header>
 
@@ -75,7 +78,7 @@
           1992年生まれ28歳。現在は自動車メーカーにてサスペンション機構設計を担当。趣味でYouTubeにて自分が使って良かった「モノ・サービス」を紹介しており、現在チャンネル登録者5000人↑、総再生回数120万回↑。2020年10月より、Webデザイン・プログラミングを学習中。学生時代、「社交ダンス」の九州チャンピオンという異例な経歴も…。
         </p>
       </div>
-      <a href="About/about.html" class="btn">ReadMore</a>
+      <a href="About/about.html" class="btn uppercase">ReadMore</a>
     </section>
 
     <section class="top-ytworks wrapper">
@@ -91,8 +94,6 @@
           <div class="swiper-slide"><img src="./Image/YouTube-4.jpg" alt="YouTubePRサムネイル4"></div>
           <div class="swiper-slide"><img src="./Image/YouTube-5.jpg" alt="YouTubePRサムネイル5"></div>
         </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
         <!-- Add Arrows -->
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
@@ -105,10 +106,10 @@
       </div>
       <div class="ytworks-btn">
         <div class="btn-RM">
-          <a href="./Works/works.html" class="btn">ReadMore</a>
+          <a href="./Works/works.html" class="btn uppercase">ReadMore</a>
         </div>
-        <div class="btn-YT">
-          <a href="https://www.youtube.com/user/datchlivetv" class="btn">YouTube</a>
+        <div class="btn-yt">
+          <a href="https://www.youtube.com/user/datchlivetv" class="btn-red">YouTube</a>
         </div>
       </div>
     </section>
@@ -120,10 +121,7 @@
           <div class="swiper-slide"><img src="./Image/Video-1.jpg" alt="Videoサムネイル1"></div>
           <div class="swiper-slide"><img src="./Image/Video-2.jpg" alt="Videoサムネイル2"></div>
           <div class="swiper-slide"><img src="./Image/Video-3.jpg" alt="Videoサムネイル3"></div>
-
         </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
         <!-- Add Arrows -->
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
@@ -133,9 +131,8 @@
           主に社交ダンスのジャンルを中心に映像制作を行っています。社交ダンス経験者・YouTuber、それぞれの視点から映像制作だけでなく、YouTubeチャンネル運営のアドバイスも行っています。
         </p>
       </div>
-      <a href="./Works/works.html" class="btn">ReadMore</a>
+      <a href="./Works/works.html" class="btn uppercase">ReadMore</a>
     </section>
-
   </main>
 
   <footer>
@@ -171,6 +168,31 @@
       },
     });
   </script>
+
+  <script>
+    const btn = document.querySelector("#toggle");
+
+
+
+    // チェックした時の挙動
+    btn.addEventListener("change", () => {
+      if (btn.checked == true) {
+        // ダークモード
+        document.body.classList.remove("light-theme");
+        document.body.classList.add("dark-theme");
+        document.getElementById('navigation').style.backgroundColor = '#000000'
+        document.getElementById('navigation').style.borderColor = '#ffffff'
+
+      } else {
+        // ライトモード
+        document.body.classList.remove("dark-theme");
+        document.body.classList.add("light-theme");
+      }
+    });
+
+
+  </script>
+
 </body>
 
 </html>

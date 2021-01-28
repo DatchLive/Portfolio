@@ -2,7 +2,20 @@ $main_color: #333333;
 $sub_color: #ffffff;
 $font_size: 1.6rem;
 $font_logo: 'Allura', cursive;
+$tablet: 600px;
 $pc: 1025px;
+
+@mixin min-screen($tablet) {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin min-screen($pc) {
+  @media screen and (min-width: $pc) {
+    @content;
+  }
+}
 
 html {
   color: $main_color;
@@ -85,16 +98,28 @@ footer {
 .sitelogo {
   &-top {
     font-family: $font_logo;
-    font-size: clamp(3.2rem, 30vw, 12rem);
+    font-size: 5rem;
+    @include min-screen($tablet) {
+      font-size: 10rem;
+    }
+    @include min-screen($pc) {
+      font-size: 14rem;
+    }
   }
   &-bottom {
     font-family: $font_logo;
     color: $sub_color;
     text-shadow: 1px 1px 2px $main_color;
-    font-size: calc(6rem + (10 - 6) * ((100vw - 30rem) / (120 - 30)));
+    font-size: 5rem;
     position: absolute;
     top: 10px;
     left: 10vw;
+    @include min-screen($tablet) {
+      font-size: 10rem;
+    }
+    @include min-screen($pc) {
+      font-size: 14rem;
+    }
   }
 }
 
@@ -114,16 +139,27 @@ footer {
 }
 
 //ボタン
-.btn {
+@mixin btn-data($color) {
   display: inline-block;
   font-size: 1.6rem;
   text-align: center;
   line-height: 1em;
   cursor: pointer;
   color: $sub_color;
-  background: $main_color;
+  background: $color;
   padding: 12px 0;
   box-sizing: border-box;
   width: 160px;
   height: 40px;
+}
+
+.btn {
+  @include btn-data($main_color);
+  &-red {
+    @include btn-data(#ff0000);
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
