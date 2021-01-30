@@ -32,7 +32,8 @@ img {
   position: fixed;
   bottom: 0;
   width: 100%;
-  border: 1px solid #333333;
+  border-top: 1px solid #333333;
+  box-sizing: border-box;
   background-color: $sub_color;
   z-index: 9999;
   &-list {
