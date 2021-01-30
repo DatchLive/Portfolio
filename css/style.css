@@ -13,7 +13,9 @@ img {
   position: fixed;
   bottom: 0;
   width: 100%;
-  border: 1px solid #333333;
+  border-top: 1px solid #333333;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-color: #ffffff;
   z-index: 9999;
 }
@@ -191,7 +193,7 @@ footer small {
   padding: 16px;
   position: relative;
   bottom: 50px;
-  left: 50px;
+  left: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   max-width: 590px;
