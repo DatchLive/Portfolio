@@ -16,7 +16,7 @@
 
 <body>
   <header class="bottom-header">
-    <nav class="nav">
+    <nav class="nav" id="navigation">
       <ul class="nav-list">
         <div class="nav-btn">
           <li class="nav-icon"><a href="../index.html"><span class="material-icons">home</span></a></li>
@@ -41,6 +41,14 @@
       </ul>
     </nav>
     <h1 class="sitelogo-bottom">Datchlive</h1>
+
+    <div class="darkmode">
+      <span class="darkmode-text uppercase">Dark mode</span>
+      <div class="toggle-switch" id="darkBtn">
+        <input id="toggle" class="toggle-input" type='checkbox' />
+        <label for="toggle" class="toggle-label"></label>
+      </div>
+    </div>
   </header>
   <h2 class="title-bottom wrapper">About</h2>
   <section class="about wrapper">
@@ -48,7 +56,7 @@
     <div class="about-image">
       <img src="../Image/Datch-icon2.jpg" alt="プロフィールアイコン">
     </div>
-    <div class="about-info">
+    <div class="about-info" id="aboutInfo">
       <div class="about-name">だっち/KouheiHonda</div>
       <div class="about-para">
         <p>
@@ -101,6 +109,8 @@
     </ul>
     <small>&copy;2020DatchLive</small>
   </footer>
+
+  <script src="../src/dark.js"></script>
 </body>
 
 </html>
