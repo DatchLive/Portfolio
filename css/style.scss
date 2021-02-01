@@ -140,6 +140,8 @@ p {
   margin-bottom: 32px;
 }
 
+//ダークモード
+
 @media screen and (min-width: 1025px) {
   .nav {
     position: absolute;
@@ -179,13 +181,6 @@ p {
     display: flex;
   }
 }
-
-// @media (prefers-color-scheme: dark) {
-//   body {
-//     background-color: #000;
-//     color: #fff;
-//   }
-// }
 
 //スライダー
 .swiper {
@@ -250,18 +245,67 @@ p {
     }
   }
   &-switch {
-    position: relative;
+    // position: relative;
     width: 32px;
     height: 16px;
-    margin: auto;
+    margin-left: 8px;
   }
 }
 
-.light-theme {
-  background: #fff;
-  color: #333;
+.darkmode {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: bold;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  @include min-screen($pc) {
+    font-size: 1.4rem;
+    position: absolute;
+    justify-content: flex-start;
+    top: 12px;
+    left: 12px;
+  }
+
+  &-text {
+    color: $sub_color;
+    text-shadow: 1px 1px 2px $main_color;
+  }
 }
-.dark-theme {
-  background: #000;
-  color: #ddd;
+
+.dark {
+  &-maintheme {
+    background: #000000;
+    color: $sub_color;
+    transition: 0.5s;
+  }
+  &-navtheme {
+    background: #000000;
+    border: $sub_color;
+    transition: 0.5s;
+  }
+  &-proftheme {
+    color: $sub_color;
+    background: $main_color;
+    transition: 0.5s;
+  }
+}
+
+.light {
+  &-maintheme {
+    background: $sub_color;
+    color: $main_color;
+    transition: 0.5s;
+  }
+  &-navtheme {
+    background: $sub_color;
+    border: #000000;
+    transition: 0.5s;
+  }
+  &-proftheme {
+    color: #000000;
+    background: $sub_color;
+    transition: 0.5s;
+  }
 }

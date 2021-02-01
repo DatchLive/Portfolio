@@ -16,7 +16,7 @@
 
 <body>
   <header class="bottom-header">
-    <nav class="nav">
+    <nav class="nav" id="navigation">
       <ul class="nav-list">
         <div class="nav-btn">
           <li class="nav-icon"><a href="../index.html"><span class="material-icons">home</span></a></li>
@@ -41,19 +41,20 @@
       </ul>
     </nav>
     <h1 class="sitelogo-bottom">Datchlive</h1>
+
+    <div class="darkmode">
+      <span class="darkmode-text uppercase">Dark mode</span>
+      <div class="toggle-switch" id="darkBtn">
+        <input id="toggle" class="toggle-input" type='checkbox' />
+        <label for="toggle" class="toggle-label"></label>
+      </div>
+    </div>
   </header>
 
   <h2 class="title-bottom wrapper">Blog</h2>
 
   <main class="wrapper">
-
   </main>
-
-
-
-
-
-
 
   <footer>
     <ul>
@@ -68,6 +69,7 @@
 
 
   <script src="../dist/main.js"></script>
+  <script src="../src/dark.js"></script>
 </body>
 
 </html>
