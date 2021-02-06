@@ -23,26 +23,24 @@ if (document.getElementById('blogs')) {
   createArticles();
 }
 
-//URLパラメータからidを取得
-let id = new URLSearchParams(location.search).get('id');
+//記事詳細ページ API
 
-//microCMSからコンテンツを取得
-async function createTexts() {
-  const resText = await fetch(
-    `https://datchlivelog.microcms.io/api/v1/blog/${id}`,
-    {
-      headers: { 'X-API-KEY': 'ecd2e202-1e5d-4e56-9153-f45c5400d664' },
-    }
-  );
-  const jsonText = await resText.json();
-  const blogTitle = jsonText.title;
-  const blogContent = jsonText.text;
+document.getElementsByClassName('blog-article').onunload = function () {
+  let id = new URLSearchParams(location.search).get('id');
 
-  //画面表示
-  document.getElementById('titleElement').innerHTML = blogTitle;
-  document.getElementById('contentElement').innerHTML = blogContent;
-}
+  async function createTexts() {
+    const resText = await fetch(
+      `https://datchlivelog.microcms.io/api/v1/blog/${id}`,
+      {
+        headers: { 'X-API-KEY': 'ecd2e202-1e5d-4e56-9153-f45c5400d664' },
+      }
+    );
+    const jsonText = await resText.json();
+    const blogTitle = jsonText.title;
+    const blogContent = jsonText.text;
 
-createTexts();
-
-// export { createArticles, createTexts };
+    document.getElementById('titleElement').innerHTML = blogTitle;
+    document.getElementById('contentElement').innerHTML = blogContent;
+  }
+  createTexts();
+};

@@ -113,7 +113,7 @@ footer {
     text-shadow: 1px 1px 2px $main_color;
     font-size: 5rem;
     position: absolute;
-    top: 10px;
+    top: 8vw;
     left: 10vw;
     @include min-screen($tablet) {
       font-size: 10rem;
@@ -155,9 +155,15 @@ footer {
 }
 
 .btn {
+  &:hover {
+    opacity: 0.5;
+  }
   @include btn-data($main_color);
   &-red {
     @include btn-data(#ff0000);
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }
 

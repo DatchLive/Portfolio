@@ -114,7 +114,7 @@ footer small {
   text-shadow: 1px 1px 2px #333333;
   font-size: 5rem;
   position: absolute;
-  top: 10px;
+  top: 8vw;
   left: 10vw;
 }
 
@@ -157,6 +157,10 @@ footer small {
   height: 40px;
 }
 
+.btn:hover {
+  opacity: 0.5;
+}
+
 .btn-red {
   display: inline-block;
   font-size: 1.6rem;
@@ -170,6 +174,10 @@ footer small {
           box-sizing: border-box;
   width: 160px;
   height: 40px;
+}
+
+.btn-red:hover {
+  opacity: 0.5;
 }
 
 .uppercase {
@@ -243,6 +251,10 @@ footer small {
 
 .works-image {
   cursor: pointer;
+}
+
+.works-image:hover {
+  opacity: 0.5;
 }
 
 .works-para {
