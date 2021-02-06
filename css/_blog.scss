@@ -1,6 +1,21 @@
 .blog {
+  &-bottom {
+    margin-bottom: 96px;
+  }
+  &-container {
+    margin-bottom: 96px;
+  }
   &-article {
-    border: 1px solid $main_color;
-    padding: 5vw;
+    margin-bottom: 32px;
+  }
+  &-image {
+    margin-bottom: 16px;
+  }
+  &-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  &-btn {
+    text-align: center;
   }
 }

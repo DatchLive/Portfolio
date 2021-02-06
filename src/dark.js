@@ -4,6 +4,7 @@ const btn = document.querySelector('#toggle');
 const body = document.body.classList;
 const nav = document.getElementById('navigation').classList;
 const matchMedia = window.matchMedia('(max-width:1025px)');
+
 //ローカルストレージ
 const keyLocalStorage = 'theme';
 const localTheme = localStorage.getItem(keyLocalStorage);
@@ -14,10 +15,12 @@ btn.addEventListener('change', () => {
     body.remove('light-maintheme');
     body.add('dark-maintheme');
     localStorage.setItem(keyLocalStorage, '1');
+    //レスポンシブ
     if (matchMedia.matches) {
-      nav.add('dark-proftheme');
-      nav.remove('light-proftheme');
+      nav.add('dark-navtheme');
+      nav.remove('light-navtheme');
     }
+    //プロフィール
     if (document.getElementById('aboutInfo')) {
       document.getElementById('aboutInfo').classList.add('dark-proftheme');
       document.getElementById('aboutInfo').classList.remove('light-proftheme');
@@ -28,8 +31,8 @@ btn.addEventListener('change', () => {
     body.add('light-maintheme');
     localStorage.setItem(keyLocalStorage, '2');
     if (matchMedia.matches) {
-      nav.add('light-proftheme');
-      nav.remove('dark-proftheme');
+      nav.add('light-navtheme');
+      nav.remove('dark-navtheme');
     }
     if (document.getElementById('aboutInfo')) {
       document.getElementById('aboutInfo').classList.add('light-proftheme');
@@ -44,8 +47,8 @@ const setThemeFile = function () {
     body.add('dark-maintheme');
     btn.checked = true;
     if (matchMedia.matches) {
-      nav.add('dark-proftheme');
-      nav.remove('light-proftheme');
+      nav.add('dark-navtheme');
+      nav.remove('light-navtheme');
     }
     if (document.getElementById('aboutInfo')) {
       document.getElementById('aboutInfo').classList.add('dark-proftheme');
@@ -55,8 +58,8 @@ const setThemeFile = function () {
     body.remove('dark-maintheme');
     body.add('light-maintheme');
     if (matchMedia.matches) {
-      nav.add('light-proftheme');
-      nav.remove('dark-proftheme');
+      nav.add('light-navtheme');
+      nav.remove('dark-navtheme');
     }
     if (document.getElementById('aboutInfo')) {
       document.getElementById('aboutInfo').classList.add('light-proftheme');
@@ -66,3 +69,13 @@ const setThemeFile = function () {
 };
 
 setThemeFile();
+
+export {
+  btn,
+  body,
+  nav,
+  matchMedia,
+  keyLocalStorage,
+  localTheme,
+  setThemeFile,
+};

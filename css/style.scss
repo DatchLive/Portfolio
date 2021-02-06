@@ -189,10 +189,10 @@ p {
   }
   &-button {
     &-next {
-      color: $sub_color;
+      color: $sub_color !important;
     }
     &-prev {
-      color: $sub_color;
+      color: $sub_color !important;
     }
   }
 }
@@ -282,10 +282,15 @@ p {
   }
   &-navtheme {
     background: #000000;
-    border: $sub_color;
+    // border: $sub_color;
     transition: 0.5s;
   }
   &-proftheme {
+    color: $sub_color;
+    background: $main_color;
+    transition: 0.5s;
+  }
+  &-modaltheme {
     color: $sub_color;
     background: $main_color;
     transition: 0.5s;
@@ -300,7 +305,7 @@ p {
   }
   &-navtheme {
     background: $sub_color;
-    border: #000000;
+    // border-top: #000000;
     transition: 0.5s;
   }
   &-proftheme {

@@ -1,32 +1,48 @@
 'use strict';
 
-export const main = document.querySelector('main');
-
-export async function createArticles() {
-  const res = await fetch('https://datchlivelog.microcms.io/api/v1/blog', {
-    headers: { 'X-API-KEY': 'ecd2e202-1e5d-4e56-9153-f45c5400d664' },
-  });
-  const json = await res.json();
-  const items = json;
+async function createArticles() {
+  const resArticle = await fetch(
+    'https://datchlivelog.microcms.io/api/v1/blog',
+    {
+      headers: { 'X-API-KEY': 'ecd2e202-1e5d-4e56-9153-f45c5400d664' },
+    }
+  );
+  const jsonArticle = await resArticle.json();
+  const items = jsonArticle;
   const contents = items.contents;
-  contents.forEach(function (item) {
-    createArticle(item);
-  });
+  const list = contents
+    .map(
+      (content) =>
+        `<li class = "blog-article"><a href="detail.html?id=${content.id}" class = "blog-title"><img src="${content.image.url}" class = "blog-image">${content.title}</a></li>`
+    )
+    .join('\n');
+  document.getElementById('blogs').innerHTML = list;
 }
 
-export function createArticle(item) {
-  const addArticle = document.createElement('article');
-  const addImage = document.createElement('img');
-  const addTitle = document.createElement('h3');
-  addImage.src = item.image.url;
-  addTitle.textContent = item.title;
-  addArticle.appendChild(addImage);
-  addArticle.appendChild(addTitle);
-  main.appendChild(addArticle);
-
-  const article = document.querySelector('article');
-  article.classList.add('blog-article');
-
-  const title = document.querySelector('h3');
-  title.classList.add('blog-title');
+if (document.getElementById('blogs')) {
+  createArticles();
 }
+
+//URLパラメータからidを取得
+let id = new URLSearchParams(location.search).get('id');
+
+//microCMSからコンテンツを取得
+async function createTexts() {
+  const resText = await fetch(
+    `https://datchlivelog.microcms.io/api/v1/blog/${id}`,
+    {
+      headers: { 'X-API-KEY': 'ecd2e202-1e5d-4e56-9153-f45c5400d664' },
+    }
+  );
+  const jsonText = await resText.json();
+  const blogTitle = jsonText.title;
+  const blogContent = jsonText.text;
+
+  //画面表示
+  document.getElementById('titleElement').innerHTML = blogTitle;
+  document.getElementById('contentElement').innerHTML = blogContent;
+}
+
+createTexts();
+
+// export { createArticles, createTexts };
