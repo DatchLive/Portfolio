@@ -1,1 +1,7 @@
 node_modules/
+public
+firebase.json
+yarn-error.log
+.firebase
+.github
+.firebaserc
