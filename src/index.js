@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 //ダークモード
 import {
@@ -6,29 +6,30 @@ import {
   body,
   nav,
   matchMedia,
+  modalBack,
   keyLocalStorage,
   localTheme,
   setThemeFile,
-} from './dark';
+} from "./dark";
 setThemeFile();
 
 //swiper.js
-import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
+import Swiper, { Navigation, Pagination, Autoplay } from "swiper";
 Swiper.use([Navigation, Pagination, Autoplay]);
-import 'swiper/swiper-bundle.css';
-var swiper = new Swiper('.swiper-container', {
+import "swiper/swiper-bundle.css";
+var swiper = new Swiper(".swiper-container", {
   // Optional parameters
   loop: true,
 
   // If we need pagination
   pagination: {
-    el: '.swiper-pagination',
+    el: ".swiper-pagination",
   },
 
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   autoplay: {
     delay: 2500,
@@ -38,8 +39,8 @@ var swiper = new Swiper('.swiper-container', {
 });
 
 //micromodal
-import MicroModal from 'micromodal';
-document.addEventListener('DOMContentLoaded', () => {
+import MicroModal from "micromodal";
+document.addEventListener("DOMContentLoaded", () => {
   MicroModal.init({
     disableScroll: true,
     awaitCloseAnimation: true,

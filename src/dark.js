@@ -4,6 +4,7 @@ const btn = document.querySelector("#toggle");
 const body = document.body.classList;
 const nav = document.getElementById("navigation").classList;
 const matchMedia = window.matchMedia("(max-width:1025px)");
+const modalBack = document.getElementsByClassName("modal-innercontainer");
 
 //ローカルストレージ
 const keyLocalStorage = "theme";
@@ -14,6 +15,11 @@ btn.addEventListener("change", () => {
     // ダークモード
     body.remove("light-maintheme");
     body.add("dark-maintheme");
+
+    //モーダル
+    for (let i = 0; i < modalBack.length; i++) {
+      modalBack[i].style.backgroundColor = "#333333";
+    }
 
     localStorage.setItem(keyLocalStorage, "1");
     //レスポンシブ
@@ -26,15 +32,15 @@ btn.addEventListener("change", () => {
       document.getElementById("aboutInfo").classList.add("dark-proftheme");
       document.getElementById("aboutInfo").classList.remove("light-proftheme");
     }
-    // if (document.getElementsByClassName("modal-innercontainer")) {
-    //   document
-    //     .getElementsByClassName("modal-innercontainer")
-    //     .classList.add("dark-proftheme");
-    // }
   } else {
     // ライトモード
     body.remove("dark-maintheme");
     body.add("light-maintheme");
+
+    for (let i = 0; i < modalBack.length; i++) {
+      modalBack[i].style.backgroundColor = "#ffffff";
+    }
+
     localStorage.setItem(keyLocalStorage, "2");
     if (matchMedia.matches) {
       nav.add("light-navtheme");
@@ -51,6 +57,11 @@ const setThemeFile = function () {
   if (localTheme === "1") {
     body.remove("light-maintheme");
     body.add("dark-maintheme");
+
+    for (let i = 0; i < modalBack.length; i++) {
+      modalBack[i].style.backgroundColor = "#333333";
+    }
+
     btn.checked = true;
     if (matchMedia.matches) {
       nav.add("dark-navtheme");
@@ -81,6 +92,7 @@ export {
   body,
   nav,
   matchMedia,
+  modalBack,
   keyLocalStorage,
   localTheme,
   setThemeFile,
